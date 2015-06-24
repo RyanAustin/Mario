@@ -1,19 +1,22 @@
 package com.launchcode.mario;
 
+import com.launchcode.mario.Printers.ConsolePrinter;
+import com.launchcode.mario.Printers.FilePrinter;
+
 import javax.swing.*;
 
 /**
- * Created by Ryan on 5/30/2015.
+ * User: Ryan
+ * Date: 6/24/2015
+ * Time: 10:53 AM
  */
-public class Stepbuilder {
+public class Pyramid {
 
-    public static void main(String[] args) {
-        System.out.println(StepBuilder());
-    }
+    // ATTRIBUTES
+    StringBuilder steps = new StringBuilder();
 
-    private static String StepBuilder() {
-        StringBuilder steps = new StringBuilder();
-
+    // CONSTRUCTOR
+    public Pyramid () {
         // Retrieve number of steps
         int numSteps = Integer.parseInt(JOptionPane.showInputDialog(null, "Enter the number of steps"));
 
@@ -23,16 +26,19 @@ public class Stepbuilder {
         // Loop to create steps
         for (int i = 0; i < numSteps; i++) {
             for (int j = 0; j < spaces; j++) {
-                steps.append(" ");
+                this.steps.append(" ");
             }
             for (int k = 0; k < hashes; k++) {
-                steps.append("#");
+                this.steps.append("#");
             }
-            steps.append("\n");
+            this.steps.append("\n");
             hashes++;
             spaces--;
         }
+    }
 
+    @Override
+    public String toString() {
         return steps.toString();
     }
 }
