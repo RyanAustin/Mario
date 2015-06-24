@@ -1,6 +1,6 @@
-package com.launchcode.mario.Stepbuilders;
+package com.launchcode.mario.Printers;
 
-import com.launchcode.mario.Stepbuilder;
+import com.launchcode.mario.Printer;
 
 import javax.swing.*;
 import java.io.*;
@@ -8,9 +8,9 @@ import java.io.*;
 /**
  * Created by Ryan on 6/10/2015.
  */
-public class FileBuilder implements Stepbuilder {
+public class FilePrinter implements Printer {
 
-    public FileBuilder() {
+    public FilePrinter() {
 
         File file = new File("mario.txt");
         try (BufferedWriter output = new BufferedWriter(new FileWriter(file.getAbsoluteFile()));) {

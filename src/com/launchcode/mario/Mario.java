@@ -1,7 +1,7 @@
 package com.launchcode.mario;
 
-import com.launchcode.mario.Stepbuilders.ConsoleBuilder;
-import com.launchcode.mario.Stepbuilders.FileBuilder;
+import com.launchcode.mario.Printers.ConsolePrinter;
+import com.launchcode.mario.Printers.FilePrinter;
 
 import javax.swing.*;
 
@@ -18,9 +18,9 @@ public class Mario {
                 JOptionPane.DEFAULT_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, null);
 
         if (printChoice == 0) {
-            ConsoleBuilder console = new ConsoleBuilder();
+            ConsolePrinter console = new ConsolePrinter();
         } else if (printChoice == 1) {
-            FileBuilder file = new FileBuilder();
+            FilePrinter file = new FilePrinter();
         }
     }
 }

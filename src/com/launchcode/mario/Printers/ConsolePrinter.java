@@ -1,15 +1,15 @@
-package com.launchcode.mario.Stepbuilders;
+package com.launchcode.mario.Printers;
 
-import com.launchcode.mario.Stepbuilder;
+import com.launchcode.mario.Printer;
 
 import javax.swing.*;
 
 /**
  * Created by Ryan on 6/10/2015.
  */
-public class ConsoleBuilder implements Stepbuilder {
+public class ConsolePrinter implements Printer {
 
-    public ConsoleBuilder() {
+    public ConsolePrinter() {
         System.out.print(StepBuilder());
     }
 
