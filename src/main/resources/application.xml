@@ -10,7 +10,9 @@
     </bean>
 
     <bean id="pyrFactory" class="com.launchcode.mario.PyramidFactory">
-
+        <constructor-arg name="pyramid" ref="pyramid"/>
     </bean>
+
+    <bean id="pyramid" class="com.launchcode.mario.Pyramid"/>
 
 </beans>

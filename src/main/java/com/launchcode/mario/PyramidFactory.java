@@ -12,25 +12,16 @@ import javax.swing.*;
  */
 public class PyramidFactory {
 
-    private PyramidFactory () {
+    public PyramidFactory (Pyramid pyramid) {
         String[] options = new String[]{"Console", "File"};
 
         int printChoice = JOptionPane.showOptionDialog(null, "Do you want to print to the console or a file?", "Print Location",
                 JOptionPane.DEFAULT_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, null);
 
         if (printChoice == 0) {
-            new ConsolePrinter().Print(new Pyramid());
+            new ConsolePrinter().Print(pyramid);
         } else if (printChoice == 1) {
-            new FilePrinter().Print(new Pyramid());
+            new FilePrinter().Print(pyramid);
         }
-    }
-
-    private static PyramidFactory factory;
-
-    public static PyramidFactory getInstance() {
-        if (factory == null) {
-            factory = new PyramidFactory();
-        }
-        return factory;
     }
 }

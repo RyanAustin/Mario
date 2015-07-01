@@ -17,13 +17,9 @@ public class Mario {
     public static void main(String[] args) {
         ApplicationContext context = new ClassPathXmlApplicationContext("application.xml");
 
-        Mario obj = (Mario) context.getBean("mario");
+        context.getBean("mario");
     }
 
-    private PyramidFactory factory;
-
-    public Mario (PyramidFactory factory) {
-        this.factory = factory;
-    }
+    public Mario (PyramidFactory factory) {  }
 
 }

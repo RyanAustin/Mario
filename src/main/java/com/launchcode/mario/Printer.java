@@ -7,5 +7,5 @@ package com.launchcode.mario;
  */
 public interface Printer {
 
-    public void Print(Pyramid steps);
+    void Print(Pyramid steps);
 }

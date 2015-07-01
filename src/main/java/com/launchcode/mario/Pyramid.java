@@ -1,8 +1,5 @@
 package com.launchcode.mario;
 
-import com.launchcode.mario.Printers.ConsolePrinter;
-import com.launchcode.mario.Printers.FilePrinter;
-
 import javax.swing.*;
 
 /**

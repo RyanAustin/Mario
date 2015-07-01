@@ -15,7 +15,7 @@ public class FilePrinter implements Printer {
     @Override
     public void Print(Pyramid steps) {
         File file = new File("mario.txt");
-        try (BufferedWriter output = new BufferedWriter(new FileWriter(file.getAbsoluteFile()));) {
+        try (BufferedWriter output = new BufferedWriter(new FileWriter(file.getAbsoluteFile()))) {
             output.write(steps.toString());
         } catch (java.io.IOException e) {
             System.out.println("There was an error:" + e.getMessage());
